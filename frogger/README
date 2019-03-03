@@ -1,0 +1,47 @@
+In order to get frogger to work you need to install a few things.
+
+PYGAME
+
+To install pygame locally, run:
+python -m pip install pygame --user
+
+PLE:
+In the frogger directory: mkdir PyGame-Learning-Environment
+git clone https://github.com/ntasfi/PyGame-Learning-Environment ./PyGame-Learning-Environment
+cd PyGame-Learning-Environment
+pip install -e .
+
+To run frogger use randomAgent.py:
+python randomAgent.py
+
+It is currently set up so the agent doesn't do anything, which enables
+you to play the game with the keyboard.  The keys are w,a,s,d to move
+the frog.  The function pickAction() is where you will write your
+agent. The return of the function is the "keystroke" to move the frog,
+K_w,K_a,K_s,K_d.  The arguments to the function are the reward you
+received for your last action/state, and the current game state.  The
+reward is just an integer.  The state looks like this: 
+
+{'homeR': [<rect(19, 62, 26, 36)>, <rect(115, 62, 26, 36)>, <rect(211,
+62, 26, 36)>, <rect(307, 62, 26, 36)>, <rect(403, 62, 26, 36)>],
+'homes': [0, 0, 0, 0, 0], 'rect_w': 24, 'cars': [<rect(-4, 418, 32,
+28)>, <rect(140, 418, 32, 28)>, <rect(23, 388, 28, 24)>, <rect(151,
+388, 28, 24)>, <rect(279, 388, 28, 24)>, <rect(35, 358, 30, 20)>,
+<rect(163, 358, 30, 20)>, <rect(291, 358, 30, 20)>, <rect(63, 322, 32,
+28)>, <rect(70, 294, 54, 20)>, <rect(246, 294, 54, 20)>], 'rivers':
+[<rect(118, 229, 94, 26)>, <rect(374, 229, 94, 26)>, <rect(222, 198,
+84, 20)>, <rect(162, 133, 62, 26)>, <rect(90, 102, 116, 20)>,
+<rect(246, 229, 94, 26)>, <rect(414, 198, 84, 20)>, <rect(386, 133,
+62, 26)>, <rect(59, 166, 180, 20)>, <rect(266, 102, 116, 20)>,
+<rect(315, 166, 180, 20)>, <rect(274, 133, 62, 26)>, <rect(442, 102,
+116, 20)>, <rect(50, 133, 62, 26)>, <rect(-10, 229, 94, 26)>,
+<rect(30, 198, 84, 20)>], 'frog_y': 485.0, 'frog_x': 224.0, 'rect_h':
+24}
+
+where 'homeR' is the locations of the frog homes, 'homes' is a list of
+whether or not each home is fllled, 'cars' is a list of car locations,
+'rivers' is a list of river objects, and 'frog_x' and 'frog_y' are the
+x,y position of the frog.  Those 'rects' are rectangles with the first
+two numbers being the upper left corner, and the next two being width
+and height of the rectangle.  More about Rects can be found here
+https://www.pygame.org/docs/ref/rect.html.
