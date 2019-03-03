@@ -3,7 +3,7 @@
 CS 1571 - Project 3: Q-Learning with Frogger
 
 ## Author
-* [Adam Richman](https://www.github.com/adamrichman1) (GitHub: adamrichman1)
+* [Adam Richman](https://www.github.com/adamrichman1)
 
 ## Project URL
 - https://github.com/PittCS1571/adr60-project3
